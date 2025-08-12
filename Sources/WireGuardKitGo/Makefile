@@ -9,7 +9,7 @@ SDKROOT ?= $(shell xcrun --sdk $(PLATFORM_NAME) --show-sdk-path)
 CONFIGURATION_BUILD_DIR ?= $(CURDIR)/out
 CONFIGURATION_TEMP_DIR ?= $(CURDIR)/.tmp
 
-export PATH := $(PATH):/usr/local/bin:/opt/homebrew/bin
+export PATH := $(PATH):/usr/local/bin:/opt/homebrew/bin:/usr/local/go/bin/go
 export CC ?= clang
 LIPO ?= lipo
 DESTDIR ?= $(CONFIGURATION_BUILD_DIR)

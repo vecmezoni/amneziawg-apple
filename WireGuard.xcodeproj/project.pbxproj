@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5658EE2E4A8D0200E3D6E4 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5658ED2E4A8D0200E3D6E4 /* libresolv.tbd */; };
 		4E29B1C32BC1222C00824F53 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4E29B1C22BC1222C00824F53 /* InfoPlist.xcstrings */; };
 		4E5C5B942BA6367F00082DED /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4E5C5B932BA6367F00082DED /* PrivacyInfo.xcprivacy */; };
 		4E5C5B962BA636B300082DED /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4E5C5B952BA636B300082DED /* PrivacyInfo.xcprivacy */; };
@@ -283,6 +284,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A5658ED2E4A8D0200E3D6E4 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		4E29B1C22BC1222C00824F53 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = InfoPlist.xcstrings; path = Sources/WireGuardApp/InfoPlist.xcstrings; sourceTree = "<group>"; };
 		4E5C5B932BA6367F00082DED /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Sources/WireGuardApp/PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
 		4E5C5B952BA636B300082DED /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5658EE2E4A8D0200E3D6E4 /* libresolv.tbd in Frameworks */,
 				6B5CA6B1220DE4E900F126CF /* NetworkExtension.framework in Frameworks */,
 				58BA78D52577F9C6006FAEA0 /* libwg-go.a in Frameworks */,
 			);
@@ -792,6 +795,7 @@
 		6FF4AC452120B9E0002C96EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A5658ED2E4A8D0200E3D6E4 /* libresolv.tbd */,
 				58DB6CD52577F95D00FB6B73 /* libwg-go.a */,
 				6FB1BDB621D4F8B800A991BF /* NetworkExtension.framework */,
 				6FF4AC462120B9E0002C96EB /* NetworkExtension.framework */,
@@ -1661,6 +1665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				PATH = "${PATH}:/opt/homebrew/opt/go/bin:/usr/local/go/bin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1670,6 +1675,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				PATH = "${PATH}:/opt/homebrew/opt/go/bin:/usr/local/go/bin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1679,6 +1685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				PATH = "${PATH}:/opt/homebrew/opt/go/bin:/usr/local/go/bin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1687,6 +1694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				PATH = "${PATH}:/opt/homebrew/opt/go/bin:/usr/local/go/bin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1727,6 +1735,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7DAG7956XZ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1798,6 +1807,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7DAG7956XZ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1836,6 +1846,8 @@
 				CODE_SIGN_ENTITLEMENTS = Sources/WireGuardApp/UI/iOS/WireGuard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Sources/WireGuardApp/UI/iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Amnezia;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1853,6 +1865,8 @@
 				CODE_SIGN_ENTITLEMENTS = Sources/WireGuardApp/UI/iOS/WireGuard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Sources/WireGuardApp/UI/iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Amnezia;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
